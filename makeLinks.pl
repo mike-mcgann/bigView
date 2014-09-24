@@ -1,3 +1,5 @@
+#!/usr/bin/env perl
+
 ##########################################################################
 # makeLinks.perl
 # Recursively creates links to top-level Global.defs, RCSMake.defs
