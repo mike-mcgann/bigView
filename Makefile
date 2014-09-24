@@ -67,6 +67,7 @@ clean:
 
 distclean: clean
 	find . -name localDepend -delete
+	find . -name Global.defs -delete
 	rm -rf lib
 	rm -rf include
 

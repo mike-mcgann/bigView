@@ -1,4 +1,6 @@
 
+TOPDIR = /dev/null
+
 EXT       = a
 AR        = ar
 ARFLAGS   = rsvcl

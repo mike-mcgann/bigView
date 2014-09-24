@@ -18,8 +18,8 @@ chop($cwd);
 $topdir = $cwd;
 
 # replace the TOPDIR line in Global.defs
-open(INPUT,"Global.defs") or die "opening Global.defs";
-open(OUTPUT,"> Global.defs.tmp") or die "opening Global.defs.tmp";
+open(INPUT,"Global.defs.defaults") or die "opening Global.defs.defaults";
+open(OUTPUT,"> Global.defs") or die "opening Global.defs";
 
 while( <INPUT> )
 {
@@ -37,8 +37,6 @@ while( <INPUT> )
 }
 close INPUT;
 close OUTPUT;
-
-rename("Global.defs.tmp", "Global.defs");
 
 # show all the files below us
 makeLinks($cwd);
