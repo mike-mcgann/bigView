@@ -3,3 +3,9 @@ localDepend
 *.a
 *.o
 *~
+browse
+browser
+genPaged
+showPaged
+dist
+glx/pick

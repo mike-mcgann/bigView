@@ -11,6 +11,8 @@
 #include <unistd.h>      // for getpagesize
 #include <pthread.h>
 #include <assert.h>
+#include <stdio.h>
+#include <string.h>
 // #include "Port.h"
 #include "Net.h"
 

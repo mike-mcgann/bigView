@@ -9,7 +9,6 @@ CC        = g++
 CPLUSPLUS = g++
 FORTRAN   = g77
 INCDIR    = .
-
 # freetype enabled by default:
 FTI    = -DUSEFREETYPE -I/usr/include/freetype2
 FTL    = -lXft

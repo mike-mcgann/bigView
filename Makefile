@@ -9,9 +9,9 @@ include Global.defs
 # LOCAL COMPILER FLAGS
 ##############################################################################
 
-LOCAL_FLAGS = -D_FILE_OFFSET_BITS=64 -Iglx -IbigFile -Ippm
+LOCAL_FLAGS = -D_FILE_OFFSET_BITS=64 -Iglx -IbigFile -IPpm
 
-LINK  = -Lglx -lGlx -Lppm -lPPM -LbigFile -lBF \
+LINK  = -Lglx -lGlx -LPpm -lPPM -LbigFile -lBF \
 	-lGLw -lGL -lXm -lXt -lXext -lX11 \
 	-lpthread -lm $(GLBL_LINK)
 
@@ -70,8 +70,17 @@ distclean: clean
 	find . -name Global.defs -delete
 	rm -rf lib
 	rm -rf include
+	rm -rf dist
 
 tag:
 	TAG="BIGVIEWSTABLE_"`date +%m_%d_%y`;\
 	cvs tag $$TAG .
+
+
+.PHONY: dist
+
+dist: clean
+	mkdir -p dist
+	( cd .. ; tar cjf /tmp/bigView.tar.bz2 bigView )
+	mv /tmp/bigView.tar.bz2 dist
 
