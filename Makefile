@@ -22,9 +22,9 @@ default: sublibs $(OBJS)
 	$(MAKE) $(APPS)
 
 sublibs:
-	cd bigFile; $(MAKE) 
-	cd ppm; $(MAKE) 
-	cd glx; $(MAKE)
+	$(MAKE) -C bigFile
+	$(MAKE) -C Ppm
+	$(MAKE) -C glx
 
 showPaged: showPaged.o $(OBJS)
 	$(CPLUSPLUS) -o $@ $(GLBL_FLAGS) showPaged.o $(OBJS) $(LINK)
