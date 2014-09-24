@@ -59,11 +59,16 @@ tar:
 new: c default
 c: clean
 clean: 
-	cd glx; $(MAKE) clean
-	cd bigFile; $(MAKE) clean
-	cd ppm; $(MAKE) clean	
+	$(MAKE) -C glx clean
+	$(MAKE) -C bigFile clean
+	$(MAKE) -C Ppm clean	
 	/bin/rm -fr junk* *.o *~ *.rpt *.gz *.out core* $(APPS) $(OBJS)
 	/bin/rm -fr `file * | grep ELF | awk -F: ' {print $$1}'`
+
+distclean: clean
+	find . -name localDepend -delete
+	rm -rf lib
+	rm -rf include
 
 tag:
 	TAG="BIGVIEWSTABLE_"`date +%m_%d_%y`;\
