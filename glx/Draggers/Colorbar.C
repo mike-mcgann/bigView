@@ -1,6 +1,7 @@
 #include <GLX.h>
 #include <Draggers/Colorbar.h>
 #include <sstream>
+#include <stdio.h>
 
 Glx::Colorbar::Colorbar(glx* env, Colormap* cmap, int x, int y, int w, int h) :
   Palette(env,x,y,w,h),

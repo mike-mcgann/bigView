@@ -8,6 +8,7 @@
 #include <set>
 #include <iomanip>
 #include <deque>
+#include <sys/types.h>
 
 template <typename T>
 std::ostream& operator<<(std::ostream& ostr, std::vector<T>& v)

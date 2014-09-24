@@ -2,3 +2,4 @@ Global.defs
 localDepend
 *.a
 *.o
+*~
